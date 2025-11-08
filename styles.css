@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+.container {
+  background: #34495e;
+  padding: 2vmin;
+}
+.pocket {
+  background: #1a252f;
+  min-height: 7.5vmin;
+  display: flex;
+  gap: 1.25vmin;
+  padding: 0.3vmin;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 7.5vmin);
+  grid-template-rows: repeat(8, 7.5vmin);
+  margin: 2.5vmin auto;
+}
+.square {
+  width: 7.5vmin;
+  height: 7.5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.square.light {
+  background: #f0d9b5;
+}
+.square.dark {
+  background: #b58863;
+}
+.square.drag-over {
+  background: #7fc97f !important;
+}
+.piece {
+  width: 6.9vmin;
+  height: 6.9vmin;
+  cursor: grab;
+  pointer-events: auto;
+}
+.piece:active {
+  cursor: grabbing;
+}
+.pocket-piece {
+  width: 6.9vmin;
+  height: 6.9vmin;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pocket-piece img {
+  width: 6.9vmin;
+  height: 6.9vmin;
+}
+.pocket-count {
+  position: absolute;
+  top: 0;
+  right: 0.25vmin;
+  background: #e74c3c;
+  color: white;
+  font-size: 1.25vmin;
+  padding: 0.125vmin 0.5vmin;
+  border-radius: 0.4vmin;
+  font-weight: bold;
+}
+.dragging {
+  opacity: 0.5;
+}
