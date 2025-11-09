@@ -24,7 +24,7 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 7.5vmin);
   grid-template-rows: repeat(8, 7.5vmin);
-  margin: 2.5vmin auto;
+  margin: 2vmin auto;
 }
 .square {
   width: 7.5vmin;
